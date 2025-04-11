@@ -1,5 +1,5 @@
 .husky
 coverage
 node_modules
-.env
-Dockerfile
+test
+.gitignore
