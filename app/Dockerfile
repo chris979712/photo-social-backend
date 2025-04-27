@@ -8,7 +8,7 @@ RUN npm install
 
 RUN npm install nodemon
 
-COPY . .
+COPY src ../photo-social-backend/app/src
 
 EXPOSE 3000
 
