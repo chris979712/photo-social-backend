@@ -7,6 +7,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/',(req,res)=>{
+  res.json({message: 'Bienvenido al servidor de GameLogAPI'});
+})
 
 app.use("/uploads", express.static("uploads")); 
 //app.use("/coverage/Icov-report/src/index.html",express.static())
