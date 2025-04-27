@@ -1,15 +1,19 @@
 FROM node:22.14
 
+# Establecer el directorio de trabajo
 WORKDIR /usr/src/app
 
+# Copiar los archivos de dependencias (package.json y package-lock.json)
 COPY package*.json ./
 
+# Instalar las dependencias
 RUN npm install
 
-RUN npm install nodemon
+# Copiar la carpeta 'src' al contenedor
+COPY src ./src
 
-COPY src ../photo-social-backend/app/src
+# Exponer el puerto
+EXPOSE 5000
 
-EXPOSE 3000
-
-CMD ["npm","start"]
+# Comando por defecto
+CMD ["npm", "start"]
