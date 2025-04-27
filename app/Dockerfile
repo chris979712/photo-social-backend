@@ -4,11 +4,11 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
+COPY . .
+
 RUN npm install
 
 RUN npm install nodemon
-
-COPY . ./src
 
 EXPOSE 5000
 
