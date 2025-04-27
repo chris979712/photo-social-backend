@@ -8,7 +8,7 @@ RUN npm install
 
 RUN npm install nodemon
 
-COPY src ./src
+COPY . .
 
 EXPOSE 3000
 
